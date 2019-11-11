@@ -1,36 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>skullxbones_back_transparant.ico</ApplicationIcon>
+    <AssemblyName>DBsampler</AssemblyName>
+    <RootNamespace>DBsampler</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Audio\acesHigh.mp3" />
+    <None Remove="Audio\agentsOfSteel.mp3" />
+    <None Remove="Audio\breakingTheLaw.mp3" />
+    <None Remove="Audio\fastAsAShark.mp3" />
+    <None Remove="Audio\heartOfSteel.mp3" />
+    <None Remove="Audio\stalingrad.mp3" />
+    <None Remove="Audio\theNumberOfTheBeast.mp3" />
     <None Remove="Audio\bd1.wav" />
     <None Remove="Audio\bd2.wav" />
-    <None Remove="Audio\hh1.wav" />
-    <None Remove="Audio\hh2.wav" />
-    <None Remove="Audio\Rock\bd1.wav" />
-    <None Remove="Audio\Rock\bd2.wav" />
-    <None Remove="Audio\Rock\clap.wav" />
-    <None Remove="Audio\Rock\hh1.wav" />
-    <None Remove="Audio\Rock\hh2.wav" />
-    <None Remove="Audio\Rock\sd1.wav" />
-    <None Remove="Audio\Rock\sd2.wav" />
-    <None Remove="Audio\Rock\shake.wav" />
-    <None Remove="Audio\Rock\tt1.wav" />
-    <None Remove="Audio\sd1.wav" />
-    <None Remove="Audio\sd2.wav" />
-    <None Remove="Audio\Techno\bd1.wav" />
-    <None Remove="Audio\Techno\bd2.wav" />
-    <None Remove="Audio\Techno\clap.wav" />
-    <None Remove="Audio\Techno\hh1.wav" />
-    <None Remove="Audio\Techno\hh2.wav" />
-    <None Remove="Audio\Techno\sd1.wav" />
-    <None Remove="Audio\Techno\sd2.wav" />
-    <None Remove="Audio\Techno\shake.wav" />
-    <None Remove="Audio\Techno\tt1.wav" />
-    <None Remove="Audio\tt1.wav" />
-    <None Remove="Audio\tt2.wav" />
+    <None Remove="Images\skullxbones_back_transparant.png" />
     <None Remove="Images\Black.png" />
     <None Remove="Images\BlackLogo.png" />
     <None Remove="Images\Blue.png" />
@@ -47,32 +34,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Audio\acesHigh.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\agentsOfSteel.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\breakingTheLaw.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\fastAsAShark.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\heartOfSteel.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\stalingrad.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\theNumberOfTheBeast.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Audio\bd1.wav" />
     <EmbeddedResource Include="Audio\bd2.wav" />
-    <EmbeddedResource Include="Audio\hh1.wav" />
-    <EmbeddedResource Include="Audio\hh2.wav" />
-    <EmbeddedResource Include="Audio\Rock\bd1.wav" />
-    <EmbeddedResource Include="Audio\Rock\bd2.wav" />
-    <EmbeddedResource Include="Audio\Rock\clap.wav" />
-    <EmbeddedResource Include="Audio\Rock\hh1.wav" />
-    <EmbeddedResource Include="Audio\Rock\hh2.wav" />
-    <EmbeddedResource Include="Audio\Rock\sd1.wav" />
-    <EmbeddedResource Include="Audio\Rock\sd2.wav" />
-    <EmbeddedResource Include="Audio\Rock\shake.wav" />
-    <EmbeddedResource Include="Audio\Rock\tt1.wav" />
-    <EmbeddedResource Include="Audio\sd1.wav" />
-    <EmbeddedResource Include="Audio\sd2.wav" />
-    <EmbeddedResource Include="Audio\Techno\bd1.wav" />
-    <EmbeddedResource Include="Audio\Techno\bd2.wav" />
-    <EmbeddedResource Include="Audio\Techno\clap.wav" />
-    <EmbeddedResource Include="Audio\Techno\hh1.wav" />
-    <EmbeddedResource Include="Audio\Techno\hh2.wav" />
-    <EmbeddedResource Include="Audio\Techno\sd1.wav" />
-    <EmbeddedResource Include="Audio\Techno\sd2.wav" />
-    <EmbeddedResource Include="Audio\Techno\shake.wav" />
-    <EmbeddedResource Include="Audio\Techno\tt1.wav" />
-    <EmbeddedResource Include="Audio\tt1.wav" />
-    <EmbeddedResource Include="Audio\tt2.wav" />
+    <EmbeddedResource Include="Images\skullxbones_back_transparant.png" />
     <EmbeddedResource Include="Images\Black.png" />
     <EmbeddedResource Include="Images\BlackLogo.png" />
     <EmbeddedResource Include="Images\Blue.png" />
@@ -89,8 +74,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.2.1.1-beta" />
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.3" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.815419" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -103,5 +97,21 @@
     <EmbeddedResource Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ColorSchemePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>

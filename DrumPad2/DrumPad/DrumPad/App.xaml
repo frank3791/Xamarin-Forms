@@ -19,7 +19,7 @@
         <Setter Property="TextColor" Value="{DynamicResource fgColor}" />
       </Style>
 
-      <Style x:key="basicButtonStyle" TargetType="Button">
+      <Style x:Key="basicButtonStyle" TargetType="Button">
         <Setter Property="TextColor" Value="{DynamicResource fgColor}" />
         <Setter Property="BorderColor" Value="{DynamicResource acColor}" />
       </Style>

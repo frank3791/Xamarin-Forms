@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="DrumPad"
+             xmlns:local="DBsampler"
              xmlns:xamu="clr-namespace:XamarinUniversity.Infrastructure"
-             x:Class="DrumPad.MainPage" >
+             x:Class="DBsampler.MainPage" >
   
   <ContentPage.Resources>
     <ResourceDictionary>
@@ -29,23 +29,14 @@
     
     <!-- Logo and app title -->
     <StackLayout Grid.Column="0" Orientation="Horizontal">
-      <Image x:Name="imgLogo" WidthRequest="75" HeightRequest="75" />
-      <Label Text="Druminator 3001" TextColor="{DynamicResource highlightColor}" FontSize="Medium" FontAttributes="Italic" VerticalOptions="Center" />
+      <Image x:Name="imgLogo" HeightRequest="75" />
+      <Label Text="DIRTBAG" TextColor="{DynamicResource highlightColor}" FontSize="Medium" FontAttributes="Italic" VerticalOptions="Center" />
     </StackLayout>
     
     <!-- Drum sound selection -->
-    <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" >
-      <Button x:Name="btnRecord" Text="Record" BackgroundColor="{DynamicResource mainColor}" />
-      <Button x:Name="btnPlay" Text="Play" BackgroundColor="{DynamicResource buttonColor}" />
-      <Label Text="Drum Style" TextColor="{DynamicResource highlightColor}" VerticalOptions="Center" />
-      <Picker SelectedIndexChanged="PickerKitsSelectedIndexChanged" WidthRequest="120">
-        <Picker.Items>
-            <x:String>Rock Kit</x:String> 
-            <x:String>Techno Kit</x:String>
-        </Picker.Items>
-        <Picker.SelectedIndex>0</Picker.SelectedIndex>
-      </Picker> 
-    </StackLayout>
+    <!--<StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center" >
+      <Button x:Name="btnStop" Text="Stop" BackgroundColor="{DynamicResource mainColor}" />
+    </StackLayout>-->
 
     <!-- Drum buttons -->
     <Grid BackgroundColor="{DynamicResource highlightColor}" Grid.Row="1" Grid.ColumnSpan="2" Padding="7" x:Name="gridButtons">
@@ -55,15 +46,15 @@
         </ResourceDictionary>
       </Grid.Resources>
       
-      <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayTomTom" Text="TomTom" />
-      <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayShare1" Text="Snare1" />
-      <Button Grid.Row="0" Grid.Column="2" x:Name="btnPlaySnare2" Text="Snare2" />
-      <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayClap"   Text="Clap"   />
-      <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayHiHat1" Text="HiHat1" />
-      <Button Grid.Row="1" Grid.Column="2" x:Name="btnPlayHiHat2" Text="HiHat2" />
-      <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayShake"  Text="Shake"  />
+      <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayAcesHigh" Text="Aces High" />
+      <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayAgentsOfSteel" Text="Agents of Steel" />
+      <Button Grid.Row="0" Grid.Column="2" x:Name="btnPlayBreakingTheLaw" Text="Breaking the Law" />
+      <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayFastAsAShark"   Text="Fast as a Shark"   />
+      <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayHeartOfSteel" Text="Heart of Steel" />
+      <Button Grid.Row="1" Grid.Column="2" x:Name="btnPlayStalingrad" Text="Stalingrad" />
+      <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayTheNumberOfTheBeast"  Text="Number of the Beast"  />
       <Button Grid.Row="2" Grid.Column="1" x:Name="btnPlayBass1"  Text="Bass1"  />
-      <Button Grid.Row="2" Grid.Column="2" x:Name="btnPlayBass2"  Text="Bass2"  />
+      <Button Grid.Row="2" Grid.Column="2" x:Name="btnPlayStop"  Text="Stop"  />
     </Grid>
 
     <!-- Other buttons-->

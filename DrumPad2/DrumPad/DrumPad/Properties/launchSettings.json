@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DrumPad": {
+      "commandName": "Project"
+    },
+    "DBsampler": {
+      "commandName": "Project"
+    }
+  }
+}

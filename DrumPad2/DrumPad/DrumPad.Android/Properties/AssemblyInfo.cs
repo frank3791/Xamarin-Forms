@@ -8,7 +8,7 @@ using Android.App;
 // associated with an assembly.
 [assembly: AssemblyTitle("DrumPad.Android")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration(configuration: "")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DrumPad.Android")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
