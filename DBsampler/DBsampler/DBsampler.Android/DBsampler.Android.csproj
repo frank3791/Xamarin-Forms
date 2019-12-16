@@ -48,6 +48,7 @@
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <AndroidLinkTool>proguard</AndroidLinkTool>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
