@@ -11,7 +11,7 @@ using Android.App;
 [assembly: AssemblyConfiguration(configuration: "")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DBsampler.Android")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

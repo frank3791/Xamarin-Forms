@@ -10,7 +10,9 @@ namespace DBsampler
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new DBsampler.MainPage());
+            //MainPage = new NavigationPage(new DBsampler.MainPage()); //org
+            //MainPage = new ContentPage(new DBsampler.MainPage()); // test
+            MainPage = new DBsampler.MainPage();
         }
         public static void UpdateThemeColors (ColorScheme scheme)
         {

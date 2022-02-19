@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="DBsampler"
-             xmlns:xamu="clr-namespace:XamarinUniversity.Infrastructure"
              x:Class="DBsampler.MainPage" >
 
   <ContentPage.Resources>
@@ -28,9 +26,10 @@
         </Grid.ColumnDefinitions>
 
         <!-- Logo and app title -->
-            <StackLayout Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" >
-            <Image Grid.Row="0" Grid.Column="0" x:Name="imgLogo" HeightRequest="75" />
-            <Label Grid.Row="0" Grid.Column="1" Text="DIRTBAG V1.2" TextColor="{DynamicResource highlightColor}" FontSize="Medium" FontAttributes="Italic" />
+        <StackLayout Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" >
+            <Image x:Name="imgLogo" HeightRequest="75" />
+            <Image x:Name="imgName" HeightRequest="75" />
+            <Label Text="V1.4" TextColor="{DynamicResource highlightColor}" FontSize="Medium" />
         </StackLayout>
 
         <!-- Drum buttons -->
@@ -40,15 +39,19 @@
                     <Style TargetType="Button" BasedOn="{StaticResource stylePadButton}" />
                 </ResourceDictionary>
             </Grid.Resources>
-            <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayAcesHigh" Text="Aces High" />
-            <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayAgentsOfSteel" Text="Agents of Steel" />
-            <Button Grid.Row="0" Grid.Column="2" x:Name="btnPlayBreakingTheLaw" Text="Breaking the Law" />
-            <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayFastAsAShark"   Text="Fast as a Shark"   />
-            <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayHolyDiver" Text="Holy Diver" />
-            <Button Grid.Row="1" Grid.Column="2" x:Name="btnPlayStalingrad" Text="Stalingrad" />
-            <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayTheNumberOfTheBeast"  Text="Number of the Beast"  />
-            <Button Grid.Row="2" Grid.Column="1" x:Name="btnPlayMadHouse"  Text="Mad House"  />
-            <Button Grid.Row="2" Grid.Column="2" x:Name="btnPlayStop"  Text="Stop"  />
+            <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayAcesHigh"               Text="Aces High" />
+            <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayAgentsOfSteel"          Text="Agents of Steel" />
+            <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayBreakingTheLaw"         Text="Breaking the Law" />
+            <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayFastAsAShark"           Text="Fast as a Shark"   />
+            <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayFhtBellsToll"           Text="fht Bells Tolls" />
+            <Button Grid.Row="2" Grid.Column="1" x:Name="btnPlayHolyDiver"              Text="Holy Diver" />
+            <Button Grid.Row="3" Grid.Column="0" x:Name="btnPlayMadHouse"               Text="Mad House"  />
+            <Button Grid.Row="3" Grid.Column="1" x:Name="btnPlayPowerSlave"             Text="Powerslave" />
+            <Button Grid.Row="4" Grid.Column="0" x:Name="btnPlaySymphDestruct"          Text="Symphony of Destruction" />
+            <Button Grid.Row="4" Grid.Column="1" x:Name="btnPlayStalingrad"             Text="Stalingrad" />
+            <Button Grid.Row="5" Grid.Column="0" x:Name="btnPlayTheNumberOfTheBeast"    Text="the Number ot Beast"  />
+            <Button Grid.Row="5" Grid.Column="1" x:Name="btnPlayStop"                   Text="Stop"  />
+
         </Grid>
         <!-- Other buttons-->
         <!--<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">

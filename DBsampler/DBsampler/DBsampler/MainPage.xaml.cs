@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using Utilities;
 using System.Diagnostics;
 
+[assembly: ExportFont("Blade2.ttf")]
+
 namespace DBsampler
 {
     public enum DrumType
@@ -15,11 +17,13 @@ namespace DBsampler
         agentsOfSteel,
         breakingTheLaw,
         fastAsAShark,
-        //churchBell,
+        fhtbellsToll,
         holyDiver,
-        stalingrad,
-        theNumberOfTheBeast,
         madHouse,
+        pwrSlave,
+        stalingrad,
+        symphDestruct,
+        theNumberOfTheBeast,
         Stop,
         count
     }
@@ -78,7 +82,8 @@ namespace DBsampler
                 animations[j++] = new Animation(v => button.BackgroundColor = GetBlendedColor(colorButton, colorMain, v), 0, 1);
             }
 
-            imgLogo.Source = ImageSource.FromResource("DBsampler.Images." + Preferences.Intstance.ColorScheme.Logo);
+            imgLogo.Source = ImageSource.FromResource("DBsampler.Images.skullxbones_back_transparant.png");
+            imgName.Source = ImageSource.FromResource("DBsampler.Images.db_name_logo_on_black.png");
         }
 
         private void OnDrumButton(DrumType drumType)
@@ -104,17 +109,19 @@ namespace DBsampler
             if (index < 1 || index > 2)
                 return;
 
-            //_ = players[(int)DrumType.Bass1].Load($"DBsampler.Audio.bd1.wav");
-            _ = players[(int)DrumType.madHouse].Load(GetStreamFromFile($"Audio.madHouse.mp3"));
-            //_ = players[(int)DrumType.churchBell].Load(GetStreamFromFile($"Audio.churchBell.mp3"));
-            _ = players[(int)DrumType.holyDiver].Load(GetStreamFromFile($"Audio.holyDiver.mp3"));
-            _ = players[(int)DrumType.Stop].Load(GetStreamFromFile($"Audio.bd2.wav"));
-            _ = players[(int)DrumType.theNumberOfTheBeast].Load(GetStreamFromFile($"Audio.theNumberOfTheBeast.mp3"));
-            _ = players[(int)DrumType.stalingrad].Load(GetStreamFromFile($"Audio.stalingrad.mp3"));
-            _ = players[(int)DrumType.fastAsAShark].Load(GetStreamFromFile($"Audio.fastAsAShark.mp3"));
-            _ = players[(int)DrumType.breakingTheLaw].Load(GetStreamFromFile($"Audio.breakingTheLaw.mp3"));
-            _ = players[(int)DrumType.agentsOfSteel].Load(GetStreamFromFile($"Audio.agentsOfSteel.mp3"));
             _ = players[(int)DrumType.acesHigh].Load(GetStreamFromFile($"Audio.acesHigh.mp3"));
+            _ = players[(int)DrumType.agentsOfSteel].Load(GetStreamFromFile($"Audio.agentsOfSteel.mp3"));
+            _ = players[(int)DrumType.breakingTheLaw].Load(GetStreamFromFile($"Audio.breakingTheLaw.mp3"));
+            _ = players[(int)DrumType.fastAsAShark].Load(GetStreamFromFile($"Audio.fastAsAShark.mp3"));
+            _ = players[(int)DrumType.fhtbellsToll].Load(GetStreamFromFile($"Audio.fhtBellsToll.mp3"));
+            _ = players[(int)DrumType.holyDiver].Load(GetStreamFromFile($"Audio.holyDiver.mp3"));
+            _ = players[(int)DrumType.madHouse].Load(GetStreamFromFile($"Audio.madHouse.mp3"));
+            _ = players[(int)DrumType.pwrSlave].Load(GetStreamFromFile($"Audio.pwrSlave.mp3"));
+            _ = players[(int)DrumType.symphDestruct].Load(GetStreamFromFile($"Audio.symphDestruct.mp3"));
+            _ = players[(int)DrumType.stalingrad].Load(GetStreamFromFile($"Audio.stalingrad.mp3"));
+            _ = players[(int)DrumType.theNumberOfTheBeast].Load(GetStreamFromFile($"Audio.theNumberOfTheBeast.mp3"));
+            _ = players[(int)DrumType.Stop].Load(GetStreamFromFile($"Audio.bd2.wav"));
+
         }
 
         Stream GetStreamFromFile(string filename)
