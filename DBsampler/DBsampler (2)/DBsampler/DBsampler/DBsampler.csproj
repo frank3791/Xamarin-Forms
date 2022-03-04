@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon>skullxbones_back_transparant.ico</ApplicationIcon>
+    <AssemblyName>DBsampler</AssemblyName>
+    <RootNamespace>DBsampler</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants></DefineConstants>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Audio\acesHigh.mp3" />
+    <None Remove="Audio\agentsOfSteel.mp3" />
+    <None Remove="Audio\bd1.wav" />
+    <None Remove="Audio\bd2.wav" />
+    <None Remove="Audio\breakingTheLaw.mp3" />
+    <None Remove="Audio\churhBell.mp3" />
+    <None Remove="Audio\fastAsAShark.mp3" />
+	<None Remove="Audio\fhtBellsToll.mp3" />
+    <None Remove="Audio\heartOfSteel.mp3" />
+    <None Remove="Audio\holyDiver.mp3" />
+    <None Remove="Audio\madHouse.mp3" />
+	<None Remove="Audio\pwrSlave.mp3" />
+	<None Remove="Audio\symphDestruct.mp3" />
+    <None Remove="Audio\stalingrad.mp3" />
+    <None Remove="Audio\theNumberOfTheBeast.mp3" />
+    <None Remove="Font\Blade2.ttf" />
+    <None Remove="Images\Black.png" />
+    <None Remove="Images\BlackLogo.png" />
+    <None Remove="Images\Blue.png" />
+    <None Remove="Images\BlueLogo.png" />
+    <None Remove="Images\db_name_logo_on_black.png" />
+    <None Remove="Images\Orange-Sq.png" />
+    <None Remove="Images\Orange.png" />
+    <None Remove="Images\OrangeLogo.png" />
+    <None Remove="Images\Pink.png" />
+    <None Remove="Images\PinkLogo.png" />
+    <None Remove="Images\Primary.png" />
+    <None Remove="Images\PrimaryLogo.png" />
+    <None Remove="Images\Sand.png" />
+    <None Remove="Images\SandLogo.png" />
+    <None Remove="Images\skullxbones_back_transparant.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <EmbeddedResource Include="Audio\acesHigh.mp3" />
+	  <EmbeddedResource Include="Audio\agentsOfSteel.mp3" />
+	  <EmbeddedResource Include="Audio\bd1.wav" />
+	  <EmbeddedResource Include="Audio\bd2.wav" />
+	  <EmbeddedResource Include="Audio\breakingTheLaw.mp3" />
+	  <EmbeddedResource Include="Audio\fastAsAShark.mp3" />
+	  <EmbeddedResource Include="Audio\fhtBellsToll.mp3" />
+	  <EmbeddedResource Include="Audio\heartOfSteel.mp3" />
+	  <EmbeddedResource Include="Audio\holyDiver.mp3" />
+	  <EmbeddedResource Include="Audio\madHouse.mp3" />
+	  <EmbeddedResource Include="Audio\pwrSlave.mp3" />
+	  <EmbeddedResource Include="Audio\symphDestruct.mp3" />
+	  <EmbeddedResource Include="Audio\stalingrad.mp3" />
+	  <EmbeddedResource Include="Audio\theNumberOfTheBeast.mp3" />
+	  <EmbeddedResource Include="Font\Blade2.ttf" />
+	  <EmbeddedResource Include="Images\Black.png" />
+	  <EmbeddedResource Include="Images\BlackLogo.png" />
+	  <EmbeddedResource Include="Images\Blue.png" />
+	  <EmbeddedResource Include="Images\BlueLogo.png" />
+	  <EmbeddedResource Include="Images\db_name_logo_on_black.png" />
+	  <EmbeddedResource Include="Images\Orange-Sq.png" />
+	  <EmbeddedResource Include="Images\Orange.png" />
+	  <EmbeddedResource Include="Images\OrangeLogo.png" />
+	  <EmbeddedResource Include="Images\Pink.png" />
+	  <EmbeddedResource Include="Images\PinkLogo.png" />
+	  <EmbeddedResource Include="Images\Primary.png" />
+	  <EmbeddedResource Include="Images\PrimaryLogo.png" />
+	  <EmbeddedResource Include="Images\Sand.png" />
+	  <EmbeddedResource Include="Images\SandLogo.png" />
+	  <EmbeddedResource Include="Images\skullxbones_back_transparant.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.5.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ColorSchemePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="ColorSchemePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

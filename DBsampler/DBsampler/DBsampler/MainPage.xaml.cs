@@ -8,6 +8,8 @@ using Utilities;
 using System.Diagnostics;
 
 [assembly: ExportFont("Blade2.ttf")]
+[assembly: ExportFont("wrap_test.ttf")]
+[assembly: ExportFont("Button-Bold.ttf")]
 
 namespace DBsampler
 {
@@ -58,9 +60,6 @@ namespace DBsampler
                 button.Clicked += (s, e) => OnDrumButton(drum);
                 j++;
             }
-
-            //btnSettings.Clicked += (s, e) => Navigation.PushAsync(new ColorSchemePage());
-            //btnAbout.Clicked += (s, e) => DisplayAlert("DIRTBAG sampler", "v1.2", "OK");
 
             Preferences.Intstance.ColorSchemeUpdated += ColorSchemeUpdated;
 

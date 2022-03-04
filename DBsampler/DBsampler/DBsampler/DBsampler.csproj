@@ -36,6 +36,7 @@
     <None Remove="Audio\stalingrad.mp3" />
     <None Remove="Audio\theNumberOfTheBeast.mp3" />
     <None Remove="Font\Blade2.ttf" />
+    <None Remove="Font\Button-Bold.ttf" />
     <None Remove="Images\Black.png" />
     <None Remove="Images\BlackLogo.png" />
     <None Remove="Images\Blue.png" />
@@ -69,6 +70,7 @@
 	  <EmbeddedResource Include="Audio\stalingrad.mp3" />
 	  <EmbeddedResource Include="Audio\theNumberOfTheBeast.mp3" />
 	  <EmbeddedResource Include="Font\Blade2.ttf" />
+	  <EmbeddedResource Include="Font\Button-Bold.ttf" />
 	  <EmbeddedResource Include="Images\Black.png" />
 	  <EmbeddedResource Include="Images\BlackLogo.png" />
 	  <EmbeddedResource Include="Images\Blue.png" />
@@ -87,11 +89,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.6">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.3.1" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.5.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
   </ItemGroup>
 

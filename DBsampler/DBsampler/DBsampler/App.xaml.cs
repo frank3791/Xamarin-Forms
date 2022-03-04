@@ -9,12 +9,29 @@ namespace DBsampler
         public App()
         {
             InitializeComponent();
-
-            //MainPage = new NavigationPage(new DBsampler.MainPage()); //org
-            //MainPage = new ContentPage(new DBsampler.MainPage()); // test
+            UpdateFontSize();
             MainPage = new DBsampler.MainPage();
         }
-        public static void UpdateThemeColors (ColorScheme scheme)
+
+        public static void UpdateFontSize()
+        {
+            if (Device.Idiom == TargetIdiom.Phone)
+            {
+                Current.Resources["btnFontSize"] = Device.GetNamedSize(NamedSize.Large, typeof(Style));
+                Current.Resources["btnPadding"] = 4;
+                Current.Resources["btnMargin"] = 4;
+                Current.Resources["logoHeight"] = 50;
+            }
+            else if (Device.Idiom == TargetIdiom.Tablet)
+            {
+                Current.Resources["btnFontSize"] = 50;
+                Current.Resources["btnPadding"] = 6;
+                Current.Resources["btnMargin"] = 6;
+                Current.Resources["logoHeight"] = 75;
+            }
+        }
+
+        public static void UpdateThemeColors(ColorScheme scheme)
         {
             if (scheme == null)
             {
@@ -25,5 +42,8 @@ namespace DBsampler
             Current.Resources["buttonColor"] = XFUtilities.GetColorFromInt(scheme.ButtonColor);
             Current.Resources["backgroundColor"] = XFUtilities.GetColorFromInt(scheme.BackgroundColor);
         }
+
+
+        
     }
 }

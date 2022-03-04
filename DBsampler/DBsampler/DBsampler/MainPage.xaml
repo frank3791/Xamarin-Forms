@@ -5,19 +5,21 @@
 
   <ContentPage.Resources>
     <ResourceDictionary>
-      <Style x:Key="stylePadButton" TargetType="Button">
+        <Style x:Key="stylePadButton" TargetType="Button">
         <Setter Property="TextColor"       Value="{DynamicResource highlightColor}" />
         <Setter Property="BackgroundColor" Value="{DynamicResource buttonColor}" />
-        <Setter Property="FontSize"        Value="Medium" />
-      </Style>
+        <Setter Property="FontFamily" Value="Button-Bold" />
+        <Setter Property="FontSize" Value="{DynamicResource btnFontSize}" />
+        <Setter Property="Padding" Value="{DynamicResource btnPadding}" />
+        <Setter Property="BorderWidth" Value="{DynamicResource btnPadding}" />
+            </Style>
     </ResourceDictionary>
   </ContentPage.Resources>
 
-    <Grid Padding="14" BackgroundColor="{DynamicResource backgroundColor}">
+    <Grid Padding="{DynamicResource btnPadding}" BackgroundColor="{DynamicResource backgroundColor}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -28,35 +30,30 @@
         <!-- Logo and app title -->
         <StackLayout Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2" >
             <Image x:Name="imgLogo" HeightRequest="75" />
-            <Image x:Name="imgName" HeightRequest="75" />
-            <Label Text="V1.4" TextColor="{DynamicResource highlightColor}" FontSize="Medium" />
+            <Image x:Name="imgName" HeightRequest="{DynamicResource logoHeight}" />
+            <Label Text="V1.5" TextColor="{DynamicResource highlightColor}" FontSize="Medium" />
+            <!-- <Label Text="{DynamicResource btnFontSize}" TextColor="{DynamicResource highlightColor}" FontSize="Medium" /> -->
         </StackLayout>
 
         <!-- Drum buttons -->
-        <Grid BackgroundColor="{DynamicResource highlightColor}" Grid.Row="1" Grid.ColumnSpan="2" Padding="7" x:Name="gridButtons">
+        <Grid BackgroundColor="{DynamicResource highlightColor}" Grid.Row="1" Grid.ColumnSpan="2" RowSpacing="{DynamicResource btnPadding}" ColumnSpacing="{DynamicResource btnPadding}" x:Name="gridButtons">
             <Grid.Resources>
                 <ResourceDictionary>
                     <Style TargetType="Button" BasedOn="{StaticResource stylePadButton}" />
                 </ResourceDictionary>
             </Grid.Resources>
-            <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayAcesHigh"               Text="Aces High" />
-            <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayAgentsOfSteel"          Text="Agents of Steel" />
-            <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayBreakingTheLaw"         Text="Breaking the Law" />
-            <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayFastAsAShark"           Text="Fast as a Shark"   />
-            <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayFhtBellsToll"           Text="fht Bells Tolls" />
-            <Button Grid.Row="2" Grid.Column="1" x:Name="btnPlayHolyDiver"              Text="Holy Diver" />
-            <Button Grid.Row="3" Grid.Column="0" x:Name="btnPlayMadHouse"               Text="Mad House"  />
-            <Button Grid.Row="3" Grid.Column="1" x:Name="btnPlayPowerSlave"             Text="Powerslave" />
-            <Button Grid.Row="4" Grid.Column="0" x:Name="btnPlaySymphDestruct"          Text="Symphony of Destruction" />
-            <Button Grid.Row="4" Grid.Column="1" x:Name="btnPlayStalingrad"             Text="Stalingrad" />
-            <Button Grid.Row="5" Grid.Column="0" x:Name="btnPlayTheNumberOfTheBeast"    Text="the Number ot Beast"  />
-            <Button Grid.Row="5" Grid.Column="1" x:Name="btnPlayStop"                   Text="Stop"  />
-
+            <Button Grid.Row="0" Grid.Column="0" x:Name="btnPlayAcesHigh"               Text="Aces_ High" />
+            <Button Grid.Row="0" Grid.Column="1" x:Name="btnPlayAgentsOfSteel"          Text="Agents_ of_ Steel"  />
+            <Button Grid.Row="1" Grid.Column="0" x:Name="btnPlayBreakingTheLaw"         Text="Break ing_ the_ Law" />
+            <Button Grid.Row="1" Grid.Column="1" x:Name="btnPlayFastAsAShark"           Text="Fast_ as_ a_ Shark" />
+            <Button Grid.Row="2" Grid.Column="0" x:Name="btnPlayFhtBellsToll"           Text="fht_ Bells_ Tolls" />
+            <Button Grid.Row="2" Grid.Column="1" x:Name="btnPlayHolyDiver"              Text="Holy_ Diver" />
+            <Button Grid.Row="3" Grid.Column="0" x:Name="btnPlayMadHouse"               Text="Mad_ House" />
+            <Button Grid.Row="3" Grid.Column="1" x:Name="btnPlayPowerSlave"             Text="Power slave" />
+            <Button Grid.Row="4" Grid.Column="0" x:Name="btnPlayStalingrad"             Text="Stalin grad" />
+            <Button Grid.Row="4" Grid.Column="1" x:Name="btnPlaySymphDestruct"          Text="Symp_ of_ Destruct ion" />
+            <Button Grid.Row="5" Grid.Column="0" x:Name="btnPlayTheNumberOfTheBeast"    Text="t_ Number_ ot_ Beast" />
+            <Button Grid.Row="5" Grid.Column="1" x:Name="btnPlayStop"                   Text="Stop" />
         </Grid>
-        <!-- Other buttons-->
-        <!--<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
-      <Button x:Name="btnSettings" Text="Settings" />
-      <Button x:Name="btnAbout" Text="About" />
-    </StackLayout>-->
     </Grid>
 </ContentPage>
